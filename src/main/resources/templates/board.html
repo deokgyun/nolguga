@@ -1,0 +1,40 @@
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default_layout}"
+>
+<head>
+    <title>자유게시판</title>
+</head>
+
+<body layout:fragment="content">
+    <h1>자유게시판</h1>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6">
+                <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>게시글번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>작성일</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+            <tr th:each="item : ${posts}">
+                <td th:text="${item.id}">1</td>
+                <td><a th:href="@{/posts/update/{id}(id=${item.id})}" th:text="${item.title}"></a></td>
+                <td th:text="${item.author}">작성예제</td>
+                <td th:text="${item.createdDate}">1999-09-09 13:13:13</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

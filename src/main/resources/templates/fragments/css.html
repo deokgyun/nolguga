@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lagn="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:fragment="css">
+        <link th:inline="css" th:href="@{/assets/images/favicon.ico}" rel="stylesheet"/>
+        <!--        Bootstrap Css-->
+        <link th:inline="css" th:href="@{/assets/css/bootstrap.min.css}" rel="stylesheet"/>
+        <!--        Icons Css-->
+        <link th:inline="css" th:href="@{/assets/css/icons.min.css}" rel="stylesheet"/>
+        <!--        App Css-->
+        <link th:inline="css" th:href="@{/assets/css/app.min.css}" id="app-style" rel="stylesheet"/>
+    <style>
+        .container-fluid{
+            width: 1200px;
+        }
+
+    </style>
+    </th:block>
+</head>
+
+</html>
