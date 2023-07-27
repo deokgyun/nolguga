@@ -1,4 +1,4 @@
-package com.an.dg.dto;
+package com.an.nolguga.dto;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -6,12 +6,12 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class PostsUpdateRequestDto {
+public class FreeBoardUpdateRequestDto {
     private String title;
     private String content;
 
     @Builder
-    public PostsUpdateRequestDto(String title, String content){
+    public FreeBoardUpdateRequestDto(String title, String content){
         this.title = title;
         this.content = content;
     }

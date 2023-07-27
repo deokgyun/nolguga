@@ -11,9 +11,8 @@
 </head>
 <body data-topbar="dark" data-layout="horizontal" data-layout-size="boxed" data-layout-mode="light">
 <div id="layout-wrapper">
-    <header id="page-topbar">
-        <th:block th:replace="~{fragments/header :: headerFragment}"></th:block>
-    </header>
+    <th:block th:replace="~{fragments/header :: headerFragment}"></th:block>
+    <th:block th:replace="~{fragments/header :: navFragment}"></th:block>
     <!-- header fragment 사용 -->
     <div class="main-content">
         <div class="page-content">

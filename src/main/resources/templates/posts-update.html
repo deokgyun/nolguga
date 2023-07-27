@@ -19,15 +19,15 @@
                 </div>
                 <div class="form-group">
                     <label for="title">제목</label>
-                    <input type="text" class="form-control" id="title" th:value="${post.title}"/>
+                    <input type="text" class="form-control" id="title" th:value="${post.title}" readonly/>
                 </div>
                 <div class="form-group">
                     <label for="author">작성자</label>
-                    <input type="text" class="form-control" id="author" th:value="${post.author}" readonly/>
+                    <input type="text" class="form-control" id="author" th:value="${post.nickname}" readonly/>
                 </div>
                 <div class="form-group">
                     <label for="content">내용</label>
-                    <textarea class="form-control" id="content" th:text="${post.content}"></textarea>
+                    <textarea class="form-control" id="content" th:text="${post.content}" readonly></textarea>
                 </div>
             </form>
             <div class="form-group mt-4">
@@ -37,7 +37,23 @@
             </div>
         </div>
     </div>
-</div>
+    <div class="col-md-12 mt-5">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>제목</th>
+                <th>작성일</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+            <tr th:each="item : ${posts}">
+                <td><a th:href="@{/posts/{id}(id=${item.id})}" th:text="${item.title}"></a></td>
+                <td th:text="${item.createdDate}">1999-09-09 13:13:13</td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
 </body>
 </html>

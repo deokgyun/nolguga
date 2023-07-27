@@ -1,4 +1,4 @@
-package com.an.dg;
+package com.an.nolguga;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,6 +11,6 @@ public class DgApplication {
     public static void main(String[] args) {
         SpringApplication.run(DgApplication.class, args);
     }
-
 }
+
 

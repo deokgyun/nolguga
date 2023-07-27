@@ -29,8 +29,8 @@
         <tbody id="tbody">
             <tr th:each="item : ${posts}">
                 <td th:text="${item.id}">1</td>
-                <td><a th:href="@{/posts/update/{id}(id=${item.id})}" th:text="${item.title}"></a></td>
-                <td th:text="${item.author}">작성예제</td>
+                <td><a th:href="@{/posts/{id}(id=${item.id})}" th:text="${item.title}"></a></td>
+                <td th:text="${item.nickname}">작성예제</td>
                 <td th:text="${item.createdDate}">1999-09-09 13:13:13</td>
                 <td></td>
             </tr>

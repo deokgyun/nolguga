@@ -4,37 +4,173 @@
       layout:decorate="~{layout/default_layout}"
 >
 <head>
-    <title>수정했습니다.</title>
+    <title>메인화면</title>
 </head>
 
 <body layout:fragment="content">
-    <h1>Content 영역입니다.</h1>
-    <div class="col-md-12">
-        <div class="row">
-            <div class="col-md-6">
-                <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title mb-4">갤러리</h4>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card p-1 border shadow-none">
+                            <div class="p-3">
+                                <h5><a href="blog-details.html" class="text-dark">Beautiful Day with Friends</a></h5>
+                                <p class="text-muted mb-0">5분 전</p>
+                            </div>
+
+                            <div class="position-relative">
+                                <img src="assets/images/small/img-1.jpg" alt="" class="img-thumbnail">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="card p-1 border shadow-none">
+                            <div class="p-3">
+                                <h5><a href="blog-details.html" class="text-dark">Beautiful Day with Friends</a></h5>
+                                <p class="text-muted mb-0">5분 전</p>
+                            </div>
+
+                            <div class="position-relative">
+                                <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card p-1 border shadow-none">
+                            <div class="p-3">
+                                <h5><a href="blog-details.html" class="text-dark">Beautiful Day with Friends</a></h5>
+                                <p class="text-muted mb-0">5분 전</p>
+                            </div>
+
+                            <div class="position-relative">
+                                <img src="assets/images/small/img-4.jpg" alt="" class="img-thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card p-1 border shadow-none">
+                            <div class="p-3">
+                                <h5><a href="blog-details.html" class="text-dark">화창한 오늘</a></h5>
+                                <p class="text-muted mb-0">5분 전</p>
+                            </div>
+
+                            <div class="position-relative">
+                                <img src="assets/images/small/img-3.jpg" alt="" class="img-thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end table-responsive -->
             </div>
         </div>
     </div>
-    <hr>
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-            <th>게시글번호</th>
-            <th>제목</th>
-            <th>작성자</th>
-            <th>작성일</th>
-        </tr>
-        </thead>
-        <tbody id="tbody">
-            <tr th:each="item : ${posts}">
-                <td th:text="${item.id}">1</td>
-                <td><a th:href="@{/posts/update/{id}(id=${item.id})}" th:text="${item.title}"></a></td>
-                <td th:text="${item.author}">작성예제</td>
-                <td th:text="${item.createdDate}">1999-09-09 13:13:13</td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
+</div>
+
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title mb-4">공지사항</h4>
+                <div class="table-responsive mt-4">
+                    <table class="table align-middle table-nowrap table-hover">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="d-flex flex-column bd-highlight">
+                                    <div class="d-flex bd-highlight">
+                                        <div class="flex-grow-1 bd-highlight">글쓴이 · 5분전</div>
+                                        <div class="bd-highlight">
+                                            <i class="bx bx-like"></i>1 &nbsp;
+                                            <i class="bx bx-comment-dots"></i> 5
+                                        </div>
+                                    </div>
+                                    <div class="bd-highlight">제목</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex flex-column bd-highlight">
+                                    <div class="d-flex bd-highlight">
+                                        <div class="flex-grow-1 bd-highlight">글쓴이 · 5분전</div>
+                                        <div class="bd-highlight">
+                                            <i class="bx bx-like"></i>1 &nbsp;
+                                            <i class="bx bx-comment-dots"></i> 5
+                                        </div>
+                                    </div>
+                                    <div class="bd-highlight">제목</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex flex-column bd-highlight">
+                                    <div class="d-flex bd-highlight">
+                                        <div class="flex-grow-1 bd-highlight">글쓴이 · 5분전</div>
+                                        <div class="bd-highlight">
+                                            <i class="bx bx-like"></i>1 &nbsp;
+                                            <i class="bx bx-comment-dots"></i> 5
+                                        </div>
+                                    </div>
+                                    <div class="bd-highlight">제목</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex flex-column bd-highlight">
+                                    <div class="d-flex bd-highlight">
+                                        <div class="flex-grow-1 bd-highlight">글쓴이 · 5분전</div>
+                                        <div class="bd-highlight">
+                                            <i class="bx bx-like"></i>1 &nbsp;
+                                            <i class="bx bx-comment-dots"></i> 5
+                                        </div>
+                                    </div>
+                                    <div class="bd-highlight">제목</div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title mb-4">자유게시판</h4>
+
+                <div class="table-responsive mt-4">
+                    <table class="table align-middle table-nowrap table-hover">
+                        <tbody>
+                        <tr th:each="item, index : ${posts}" th:if="${index.index} < 4">
+                            <td>
+                                <div class="d-flex flex-column bd-highlight">
+                                    <div class="d-flex bd-highlight">
+                                        <div class="flex-grow-1 bd-highlight"><span
+                                                th:text="|${item.nickname} · ${item.createdDate}|"></span></div>
+                                        <div class="bd-highlight">
+                                            <i class="bx bx-like"></i><span th:text="${item.heart}"></span> &nbsp;
+                                            <i class="bx bx-comment-dots"></i> <span
+                                                th:text=" ${item.commentCount}"></span>
+                                        </div>
+                                    </div>
+                                    <div class="bd-highlight"><a th:text="${item.title}" th:href="@{/posts/update/{id}(id=${item.id})}"></a></div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

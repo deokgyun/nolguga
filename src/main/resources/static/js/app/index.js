@@ -12,11 +12,15 @@ var main = {
         $('#btn-delete').on('click', function(){
             _this.delete();
         });
+
+        $('#freeBoard').on('click', function(){
+            _this.boardMove();
+        })
     },
     save : function(){
         var data = {
             title : $('#title').val(),
-            author : $('#author').val(),
+            nickname : $('#nickname').val(),
             content : $('#content').val()
         };
 
@@ -68,6 +72,10 @@ var main = {
         }).fail(function (error){
             alert(JSON.stringify(error));
         });
+    },
+    boardMove : function(){
+        var url = "/posts";
+        location.href=url;
     }
 };
 
